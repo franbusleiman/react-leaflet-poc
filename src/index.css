@@ -12,11 +12,6 @@ code {
     monospace;
 }
 
-.leaflet-div-icon {
-  background: unset !important;
-  border: unset !important;
-}
-
 .custom-icon {
   display: flex;
   flex-direction: column;
@@ -30,8 +25,8 @@ code {
 }
 
 .marker-icon img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 2px solid white;
   border-radius: 50%;
 }
@@ -46,4 +41,44 @@ code {
   bottom: -10px; /* Position the beak at the bottom */
   left: 50%; /* Center the beak horizontally */
   transform: translateX(-50%); /* Adjust for centering */
+}
+
+.leaflet-div-icon {
+  background: unset !important;
+  border: unset !important;
+}
+
+.leaflet-popup-close-button {
+  display: none;
+}
+/* Additional styles for the Popup content */
+
+
+  .request-popup .leaflet-popup-content-wrapper {
+    margin: 0px;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0) !important;
+    box-shadow: none !important;
+  }
+
+  .leaflet-popup-content {
+    width:auto !important;
+    max-width: auto;
+    border-radius: 20px;
+    padding: 0px;
+    margin: 0px;
+    }
+
+    .leaflet-popup-tip {
+      background: rgba(0, 0, 0, 0) !important;
+      box-shadow: none !important;
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+.request-popup .leaflet-popup-content-wrapper img {
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 0px;
 }

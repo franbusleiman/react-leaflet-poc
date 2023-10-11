@@ -1,8 +1,7 @@
 import React from 'react';
 import { Marker , Popup } from 'react-leaflet';
 import { divIcon } from 'leaflet';
-import { renderToStaticMarkup } from 'react-dom/server';
-import { Image } from 'react'
+
 const CustomMarker = ({ position, popupText, imageUrl }) => {
     const customIcon = divIcon({
       className: 'custom-icon',
@@ -17,13 +16,15 @@ const CustomMarker = ({ position, popupText, imageUrl }) => {
           <div class="marker-beak"></div>
         </div>
       `,
-      iconSize: [30, 40],
-      iconAnchor: [15, 40],
+      iconSize: [50, 50],
+      iconAnchor: [25, 50],
     });
   
     return (
       <Marker position={position} icon={customIcon}>
-        <Popup>{popupText}</Popup>
+        <Popup className='request-popup' >
+        <img src={imageUrl} alt="Custom Popup Image" />
+        </Popup>
       </Marker>
     );
   };

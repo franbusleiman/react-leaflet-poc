@@ -31,7 +31,7 @@ const App = () => {
 
 
 
-  <Polyline positions={path} color="white" dashArray={dashArray}/>
+  {/* <Polyline positions={path} color="white" dashArray={dashArray}/> */}
 
     </MapContainer>
   );
