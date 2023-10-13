@@ -29,7 +29,7 @@ const CustomMarker = ({ position, popupText, imageUrls }) => {
 
   return (
     <Marker position={position} icon={customIcon}>
-      <Popup  className="request-popup" interactive>
+      <Popup  className="request-popup" autoPanPadding={[-55, 10]} interactive>
           <CustomSlider imageUrls={imageUrls} />
           <div style={{width:500}}></div>
         </Popup>

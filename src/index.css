@@ -12,6 +12,9 @@ code {
     monospace;
 }
 
+
+/* Icon css styles */
+
 .custom-icon {
   display: flex;
   flex-direction: column;
@@ -48,11 +51,14 @@ code {
   border: unset !important;
 }
 
+
+
+
+/* Popup css styles */
+
 .leaflet-popup-close-button {
   display: none;
 }
-/* Additional styles for the Popup content */
-
 
   .request-popup .leaflet-popup-content-wrapper {
     margin: 0px;
@@ -78,7 +84,7 @@ code {
 
 
 .request-popup .leaflet-popup-content-wrapper img {
-  max-width: 400px;
+  max-width: 70%; 
   border-radius: 10px;
   margin: 0px;
 }
