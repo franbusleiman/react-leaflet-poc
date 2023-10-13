@@ -1,30 +1,24 @@
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-
-const CustomSlider = ({imageUrls }) => {
-
-  const sliderSettings = {
-    arrows: true,
-    dots: true,
-    autoplay: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
+const CustomSlider = ({ imageUrls }) => {
   return (
-  
-        <Slider {...sliderSettings}>
-          {imageUrls.map((imageUrl, index) => (
-            <div key={index}>
-              <img src={imageUrl} alt={`Custom Popup Image ${index + 1}`} />
-            </div>
-          ))}
-        </Slider>
+    <Carousel
+      showArrows={true}
+      infiniteLoop={true}
+      autoPlay={false}
+      showStatus={false}
+      showThumbs={false}
+      interval={3000}
+    >
+      {imageUrls.map((imageUrl, index) => (
+        <div key={index}>
+          <img src={imageUrl} alt={`Custom Popup Image ${index + 1}`} />
+        </div>
+      ))}
+    </Carousel>
   );
-}
+};
 
 export default CustomSlider;

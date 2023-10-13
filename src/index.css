@@ -82,3 +82,7 @@ code {
   border-radius: 10px;
   margin: 0px;
 }
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: rgba(0,0,0,0.0) !important;
+}

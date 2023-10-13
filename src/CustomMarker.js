@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import { divIcon } from 'leaflet';
 import Slider from 'react-slick';
@@ -8,6 +8,7 @@ import CustomSlider from './CustomSlider';
 
 
 const CustomMarker = ({ position, popupText, imageUrls }) => {
+
   const customIcon = divIcon({
     className: 'custom-icon',
     html: `
@@ -25,23 +26,14 @@ const CustomMarker = ({ position, popupText, imageUrls }) => {
     iconAnchor: [25, 50],
   });
 
-  const sliderSettings = {
-    arrows: true,
-    dots: true,
-    autoplay: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   return (
     <Marker position={position} icon={customIcon}>
-      <Popup className="request-popup">
-
-      <CustomSlider imageUrls={imageUrls}/>
-
+      <Popup  className="request-popup" interactive>
+          <CustomSlider imageUrls={imageUrls} />
+          <div style={{width:500}}></div>
+        </Popup>
       
-      </Popup>
     </Marker>
   );
 }
