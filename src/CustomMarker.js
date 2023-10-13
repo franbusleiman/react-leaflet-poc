@@ -4,6 +4,7 @@ import { divIcon } from 'leaflet';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import CustomSlider from './CustomSlider';
 
 
 const CustomMarker = ({ position, popupText, imageUrls }) => {
@@ -36,13 +37,10 @@ const CustomMarker = ({ position, popupText, imageUrls }) => {
   return (
     <Marker position={position} icon={customIcon}>
       <Popup className="request-popup">
-        <Slider {...sliderSettings}>
-          {imageUrls.map((imageUrl, index) => (
-            <div key={index}>
-              <img src={imageUrl} alt={`Custom Popup Image ${index + 1}`} />
-            </div>
-          ))}
-        </Slider>
+
+      <CustomSlider imageUrls={imageUrls}/>
+
+      
       </Popup>
     </Marker>
   );
