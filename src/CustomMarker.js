@@ -1,13 +1,12 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import { divIcon } from 'leaflet';
-import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import CustomSlider from './CustomSlider';
 
 
-const CustomMarker = ({ position, popupText, imageUrls }) => {
+const CustomMarker = ({ position, imageUrls }) => {
 
   const customIcon = divIcon({
     className: 'custom-icon',

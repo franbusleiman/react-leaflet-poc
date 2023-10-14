@@ -1,7 +1,6 @@
 import React from 'react';
-import { MapContainer, Marker, TileLayer, Polyline} from 'react-leaflet';
-import CustomMarker from './CustomMarker'; // Import your custom marker component
-import { Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Polyline} from 'react-leaflet';
+import CustomMarker from './CustomMarker'; 
 
 const App = () => {
   const position = [18.230315, -65.636255  ]
@@ -23,12 +22,12 @@ const App = () => {
   "https://conocedores.com/wp-content/uploads/2019/05/islas-virgenes-britanicas-08052019.jpg"]}/>
 
 
-  <CustomMarker position={marker2Position}  popupText="This is a custom marker popup" imageUrls={["https://conocedores.com/wp-content/uploads/2019/05/islas-virgenes-britanicas-08052019.jpg"]}/>
+  <CustomMarker position={marker2Position}  imageUrls={["https://conocedores.com/wp-content/uploads/2019/05/islas-virgenes-britanicas-08052019.jpg"]}/>
 
-  <CustomMarker position={marker3Position}  popupText="This is a custom marker popup" imageUrls={["https://images.hola.com/imagenes/viajes/20200323163766/islas-virgenes-britanicas-caribe-secreto/0-801-833/islas-virgenes-t.jpg?tx=w_680"]} />
+  <CustomMarker position={marker3Position}   imageUrls={["https://images.hola.com/imagenes/viajes/20200323163766/islas-virgenes-britanicas-caribe-secreto/0-801-833/islas-virgenes-t.jpg?tx=w_680"]} />
 
 
-<CustomMarker position={marker4Position}  popupText="This is a custom marker popup" imageUrls={["https://traveler.marriott.com/es/wp-content/uploads/sites/2/2022/12/GI-183379491-Couple-Walking-Beach-1920x1080-420x236.jpg"]}/>
+<CustomMarker position={marker4Position}   imageUrls={["https://traveler.marriott.com/es/wp-content/uploads/sites/2/2022/12/GI-183379491-Couple-Walking-Beach-1920x1080-420x236.jpg"]}/>
 
 
 
