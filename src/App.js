@@ -15,8 +15,8 @@ const App = () => {
 
   const MapEvents = () => {
     useMapEvents({
-      zoomend() { // zoom event (when zoom animation ended)
-        const zoom = this.getZoom(); // get current Zoom of map
+      zoomend() { 
+        const zoom = this.getZoom(); 
         setZoom(zoom);
         console.log("zoom: " + Zoom);
 

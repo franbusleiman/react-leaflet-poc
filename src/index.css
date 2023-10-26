@@ -40,10 +40,10 @@ code {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-top: 8px solid white;
-  position: absolute; /* Add position: absolute */
-  bottom: -10px; /* Position the beak at the bottom */
-  left: 50%; /* Center the beak horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
+  position: absolute; 
+  bottom: -10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .leaflet-div-icon {
