@@ -8,9 +8,14 @@ import CustomSlider from "./CustomSlider";
 interface CustomMarkerProps {
   position: number[];
   imageUrls: string[];
+  popupText?: string;
 }
 
-const CustomMarker = ({ position, imageUrls }: CustomMarkerProps) => {
+const CustomMarker = ({
+  position,
+  imageUrls,
+  popupText,
+}: CustomMarkerProps) => {
   const customIcon = divIcon({
     className: "custom-icon",
     html: `

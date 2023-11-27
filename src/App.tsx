@@ -19,7 +19,6 @@ const App = () => {
   const [Zoom, setZoom] = useState<number>(9);
 
   //Map event components
-
   const MapEvents = () => {
     useMapEvents({
       zoomend() {
@@ -34,7 +33,6 @@ const App = () => {
 
   return (
     <MapContainer
-      //@ts-ignore
       center={position}
       zoom={Zoom}
       style={{ height: "1000px", width: "100%" }}
@@ -43,7 +41,6 @@ const App = () => {
 
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
-        //@ts-ignore
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
       />
 
@@ -51,7 +48,6 @@ const App = () => {
         <>
           <CustomMarker
             position={position}
-            //@ts-ignore
             popupText="This is a custom marker popup"
             imageUrls={[
               "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/0c/24/53/img-20161227-152629-largejpg.jpg?w=700&h=500&s=1",
