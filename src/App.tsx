@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Polyline, useMapEvents } from "react-leaflet";
 import CustomMarker from "./CustomMarker";
 
 //Note for TS and react-scripts Dependencies
-// react-scripts@5.0.1 is compatible to typescript@4.5.5 (not@5.0.0)
+// react-scripts@5.0.1 is compatible to typescript@4.5.5 (and not with TS@5.0.0)
 
 const App = () => {
   const position: number[] = [18.230315, -65.636255];
