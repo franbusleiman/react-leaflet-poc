@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MapContainer, TileLayer, Polyline, useMapEvents } from "react-leaflet";
 import CustomMarker from "./CustomMarker";
 
@@ -18,10 +18,11 @@ const App = () => {
 
   const [Zoom, setZoom] = useState<number>(9);
 
-  //Map event components
+  //Map event component
   const MapEvents = () => {
     useMapEvents({
-      zoomend() {
+      //typecasting in TS
+      zoomend(this: L.Map) {
         const zoom = this.getZoom();
         setZoom(zoom);
         console.log("zoom: " + Zoom);

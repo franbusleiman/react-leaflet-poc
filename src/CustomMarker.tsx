@@ -1,5 +1,4 @@
 import { Marker, Popup } from "react-leaflet";
-//@ts-ignore
 import { divIcon } from "leaflet";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,14 +33,9 @@ const CustomMarker = ({
   });
 
   return (
-    //@ts-ignore
+    //Todo Check Marker interface type for later project updates
     <Marker position={position} icon={customIcon}>
-      <Popup
-        //@ts-ignore
-        className="request-popup"
-        autoPanPadding={[-55, 10]}
-        interactive
-      >
+      <Popup className="request-popup" autoPanPadding={[-55, 10]} interactive>
         <CustomSlider imageUrls={imageUrls} />
         <div style={{ width: 500 }}></div>
       </Popup>
