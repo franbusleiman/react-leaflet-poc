@@ -1,8 +1,11 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const CustomSlider = ({ imageUrls }) => {
+interface CustomSliderProps {
+  imageUrls: string[];
+}
+
+const CustomSlider = ({ imageUrls }: CustomSliderProps) => {
   return (
     <Carousel
       showArrows={true}
@@ -12,7 +15,7 @@ const CustomSlider = ({ imageUrls }) => {
       showThumbs={false}
       interval={3000}
     >
-      {imageUrls.map((imageUrl, index) => (
+      {imageUrls.map((imageUrl: string, index: number) => (
         <div key={index}>
           <img src={imageUrl} alt={`Custom Popup Image ${index + 1}`} />
         </div>
