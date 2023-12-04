@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { MapContainer, TileLayer, Polyline, useMapEvents } from "react-leaflet";
 import CustomMarker from "./CustomMarker";
+import { LatLngTuple } from "leaflet";
 
 //Note for TS and react-scripts Dependencies
 // react-scripts@5.0.1 is compatible to typescript@4.5.5 (and not with TS@5.0.0)
 
 const App = () => {
-  const position: number[] = [18.230315, -65.636255];
-  const marker2Position: number[] = [18.121769, -65.539487];
-  const marker3Position: number[] = [18.164306, -65.408915];
-  const marker4Position: number[] = [18.311427, -65.327476];
-  const path: number[][] = [
+  const position: LatLngTuple = [18.230315, -65.636255];
+  const marker2Position: LatLngTuple = [18.121769, -65.539487];
+  const marker3Position: LatLngTuple = [18.164306, -65.408915];
+  const marker4Position: LatLngTuple = [18.311427, -65.327476];
+  const path: LatLngTuple[] = [
     position,
     marker2Position,
     marker3Position,

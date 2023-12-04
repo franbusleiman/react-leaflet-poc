@@ -1,11 +1,11 @@
 import { Marker, Popup } from "react-leaflet";
-import { divIcon } from "leaflet";
+import { LatLngTuple, divIcon } from "leaflet";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomSlider from "./CustomSlider";
 
 interface CustomMarkerProps {
-  position: number[];
+  position: LatLngTuple;
   imageUrls: string[];
   popupText?: string;
 }
