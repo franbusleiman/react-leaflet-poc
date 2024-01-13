@@ -7,7 +7,7 @@ import { LatLngTuple } from "leaflet";
 // react-scripts@5.0.1 is compatible to typescript@4.5.5 (and not with TS@5.0.0)
 
 const App = () => {
-  const position: LatLngTuple = [-31.411035, -64.195272];
+  const position: LatLngTuple = [-31.415634, -64.194254];
   const marker2Position: LatLngTuple = [18.121769, -65.539487];
   const marker3Position: LatLngTuple = [18.164306, -65.408915];
   const marker4Position: LatLngTuple = [18.311427, -65.327476];
@@ -20,7 +20,7 @@ const App = () => {
   ];
   const dashArray: string = "2, 10";
 
-  const [Zoom, setZoom] = useState<number>(9);
+  const [Zoom, setZoom] = useState<number>(14);
 
   //Map event component
   const MapEvents = () => {
@@ -45,20 +45,15 @@ const App = () => {
       <MapEvents />
 
       <TileLayer
-        url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+       url= 'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.{ext}'
+
+       	attribution= '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+       	ext= 'png'
       />
 
       {Zoom > 10 && (
         <>
-          <CustomMarker
-            position={position}
-            popupText="This is a custom marker popup"
-            imageUrls={[
-              "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/0c/24/53/img-20161227-152629-largejpg.jpg?w=700&h=500&s=1",
-              "https://conocedores.com/wp-content/uploads/2019/05/islas-virgenes-britanicas-08052019.jpg",
-            ]}
-          />
+
           <CustomMarker
             position={marker2Position}
             imageUrls={[
