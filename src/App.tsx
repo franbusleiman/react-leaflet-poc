@@ -7,7 +7,7 @@ import { LatLngTuple } from "leaflet";
 // react-scripts@5.0.1 is compatible to typescript@4.5.5 (and not with TS@5.0.0)
 
 const App = () => {
-  const position: LatLngTuple = [18.230315, -65.636255];
+  const position: LatLngTuple = [-31.411035, -64.195272];
   const marker2Position: LatLngTuple = [18.121769, -65.539487];
   const marker3Position: LatLngTuple = [18.164306, -65.408915];
   const marker4Position: LatLngTuple = [18.311427, -65.327476];
